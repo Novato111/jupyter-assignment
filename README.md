@@ -3,6 +3,11 @@
 ## Overview
 This project is a prototype implementation of a Jupyter Notebook using modern web technologies. Users can dynamically create files, add code cells, write Python code, and execute it with outputs displayed directly in the UI. The backend is powered by JupyterHub, which is integrated via Docker.
 
+## Screenshots
+
+![App Screenshot](https://github.com/Novato111/jupyter-assignment/blob/main/assest/1.png)
+
+
 ## Technologies Used
 - **Frontend Framework**: React with TypeScript
 - **UI Library**: NextUI
