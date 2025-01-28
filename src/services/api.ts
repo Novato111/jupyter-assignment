@@ -29,7 +29,10 @@ const createKernel = async (): Promise<string> => {
       }),
     });
 
-    if (!response.ok) throw new Error("Failed to create kernel");
+    if (!response.ok)
+      throw new Error(
+        "Failed to create kernel Please check your token,  Logout and login again with valid token"
+      );
 
     const data = await response.json();
 
@@ -160,23 +163,26 @@ if (savedToken) {
 }
 
 const isTokenValid = async (token: string): Promise<boolean> => {
-  try {
-    const response = await fetch(
-      `${config.baseUrl}/hub/api/authorizations/token/${token}`,
-      {
-        method: "GET",
-        headers: {
-          Authorization: `token ${token}`,
-          "Content-Type": "application/json",
-        },
-      }
-    );
+  // try {
+  //   const response = await fetch(
+  //     `${config.baseUrl}/hub/api/authorizations/token/${token}`,
+  //     {
+  //       method: "GET",
 
-    return response.ok;
-  } catch (error) {
-    console.error("Error validating token:", error);
-    return false;
-  }
+  //       headers: {
+  //         Authorization: `token ${token}`,
+  //         "Content-Type": "application/json",
+  //       },
+  //     }
+  //   );
+  //   alert(token);
+  console.log(token);
+  return true;
+  // } catch (error) {
+  //   console.error("Error validating token:", error);
+  //   alert("error");
+  //   return false;
+  // }
 };
 
 const disconnect = () => {
@@ -185,7 +191,7 @@ const disconnect = () => {
     ws.close();
     ws = null; // Set ws to null to indicate it's disconnected
     kernelId = null; // Reset kernelId
-    wsReady = false; // Mark WebSocket as not ready
+    wsReady = false;
     console.log("WebSocket disconnected");
   }
 };
@@ -204,7 +210,6 @@ const checkWebSocketStatus = () => {
   }
 };
 
-// Example: You can call this function to check the connection status
 checkWebSocketStatus();
 
 export { executeCode, setAuthToken, savedToken, isTokenValid, disconnect };

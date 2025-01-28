@@ -45,7 +45,7 @@ export const FileEditor: React.FC = () => {
 
   if (!activeFile) {
     return (
-      <div className="h-full flex items-center justify-center bg-gradient-to-br from-gray-900 to-black p-6">
+      <div className=" flex items-center justify-center bg-gradient-to-br from-gray-900 to-black p-6">
         <Card className="p-6 bg-black/40 backdrop-blur border border-white/10 shadow-lg text-center">
           <FolderOpen className="w-12 h-12 mx-auto text-white/30 mb-4" />
           <h2 className="text-lg font-medium text-white/80">
@@ -60,7 +60,7 @@ export const FileEditor: React.FC = () => {
   }
 
   return (
-    <div className="h-full bg-gradient-to-br from-gray-900 to-black text-xs">
+    <div className="  h-screen bg-gradient-to-br from-gray-900 to-black text-xs sm:h-screen">
       <div className="max-w-6xl mx-auto p-4">
         <Card className="bg-black/40 backdrop-blur border border-white/10 shadow-lg">
           {/* Header */}
