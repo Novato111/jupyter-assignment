@@ -72,7 +72,8 @@ This project is a prototype implementation of a Jupyter Notebook using modern we
 5. Generate an API token:
    - Navigate to the Token page in JupyterHub and generate an authentication token for API access.
 
-### CORS Configuration <h1 style="color: red;">Important Step</h1>
+### CORS Configuration 
+<h1 style="color: red;">Important Step</h1>
 When we are accesing the kernerls from the frontend we get CORS errors, I was able to figure out solution but i dont know if its the best solution
 you have to start docker container for jupterhub and visit localhost:8000 and login/signup as admin and click "START SERVER" and go back to your docker you will see jupyter-admin running
 click on it go to files home/jovyan/.jupyter/jupyter_server_config.py` and  Add the following configuration to the file  mentioned in the step3 
