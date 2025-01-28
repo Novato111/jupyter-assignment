@@ -116,4 +116,9 @@ click on it go to files home/jovyan/.jupyter/jupyter_server_config.py` and  Add 
 - If you encounter any issues, check Docker logs and ensure the CORS settings are correctly applied.
 
 
+## Support
+
+For support, email sunnysarje@gmail.com or join our Slack channel.
+
+
 
